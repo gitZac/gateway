@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_global_magazine_heroes",
+  "info": {
+    "displayName": "MagazineHero",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "superTitle": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "atomic.cta",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
