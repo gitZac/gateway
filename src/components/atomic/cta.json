@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_atomic_ctas",
+  "info": {
+    "displayName": "cta",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
