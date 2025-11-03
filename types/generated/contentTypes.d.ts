@@ -546,7 +546,12 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     components: Schema.Attribute.DynamicZone<
-      ['shared.seo', 'global.magazine-hero']
+      [
+        'shared.seo',
+        'global.magazine-hero',
+        'global.test-component',
+        'global.event-card-list',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -12,6 +12,17 @@ export interface AtomicCta extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalEventCardList extends Struct.ComponentSchema {
+  collectionName: 'components_global_event_card_lists';
+  info: {
+    displayName: 'EventCardList';
+    icon: 'music';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalMagazineHero extends Struct.ComponentSchema {
   collectionName: 'components_global_magazine_heroes';
   info: {
@@ -26,6 +37,21 @@ export interface GlobalMagazineHero extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.String;
     superTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface GlobalTestComponent extends Struct.ComponentSchema {
+  collectionName: 'components_global_test_components';
+  info: {
+    displayName: 'testComponent';
+    icon: 'briefcase';
+  };
+  attributes: {
+    anotherCoolImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    coolImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -71,7 +97,9 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'atomic.cta': AtomicCta;
+      'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
+      'global.test-component': GlobalTestComponent;
       'shared.media': SharedMedia;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

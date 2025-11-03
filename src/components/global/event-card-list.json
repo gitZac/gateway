@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_global_event_card_lists",
+  "info": {
+    "displayName": "EventCardList",
+    "icon": "music"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
