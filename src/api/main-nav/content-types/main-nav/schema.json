@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_navs",
+  "info": {
+    "singularName": "main-nav",
+    "pluralName": "main-navs",
+    "displayName": "Main Nav"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "atomic.link",
+      "repeatable": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

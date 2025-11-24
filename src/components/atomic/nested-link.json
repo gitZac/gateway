@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_atomic_nested_links",
+  "info": {
+    "displayName": "nestedLink"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

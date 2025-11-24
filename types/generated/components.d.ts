@@ -12,6 +12,40 @@ export interface AtomicCta extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomicLink extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_links';
+  info: {
+    displayName: 'link';
+    icon: 'link';
+  };
+  attributes: {
+    nestedLink: Schema.Attribute.Component<'atomic.nested-link', true>;
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface AtomicNestedLink extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_nested_links';
+  info: {
+    displayName: 'nestedLink';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface AtomicSimpleList extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_simple_lists';
+  info: {
+    displayName: 'simpleList';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalEventCardList extends Struct.ComponentSchema {
   collectionName: 'components_global_event_card_lists';
   info: {
@@ -38,6 +72,15 @@ export interface GlobalMagazineHero extends Struct.ComponentSchema {
     superTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
+}
+
+export interface GlobalSimpleNav extends Struct.ComponentSchema {
+  collectionName: 'components_global_simple_navs';
+  info: {
+    displayName: 'SimpleNav';
+    icon: 'layer';
+  };
+  attributes: {};
 }
 
 export interface GlobalTestComponent extends Struct.ComponentSchema {
@@ -97,8 +140,12 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'atomic.cta': AtomicCta;
+      'atomic.link': AtomicLink;
+      'atomic.nested-link': AtomicNestedLink;
+      'atomic.simple-list': AtomicSimpleList;
       'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
+      'global.simple-nav': GlobalSimpleNav;
       'global.test-component': GlobalTestComponent;
       'shared.media': SharedMedia;
       'shared.rich-text': SharedRichText;
