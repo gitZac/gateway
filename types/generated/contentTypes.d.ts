@@ -526,6 +526,7 @@ export interface ApiMainNavMainNav extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaButton: Schema.Attribute.Component<'atomic.cta', false>;
     links: Schema.Attribute.Component<'atomic.link', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -556,7 +557,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       [
         'shared.seo',
         'global.magazine-hero',
-        'global.test-component',
         'global.event-card-list',
         'global.simple-nav',
       ]

@@ -78,24 +78,9 @@ export interface GlobalSimpleNav extends Struct.ComponentSchema {
   collectionName: 'components_global_simple_navs';
   info: {
     displayName: 'SimpleNav';
-    icon: 'layer';
+    icon: 'apps';
   };
   attributes: {};
-}
-
-export interface GlobalTestComponent extends Struct.ComponentSchema {
-  collectionName: 'components_global_test_components';
-  info: {
-    displayName: 'testComponent';
-    icon: 'briefcase';
-  };
-  attributes: {
-    anotherCoolImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    coolImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    text: Schema.Attribute.String;
-  };
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -146,7 +131,6 @@ declare module '@strapi/strapi' {
       'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
       'global.simple-nav': GlobalSimpleNav;
-      'global.test-component': GlobalTestComponent;
       'shared.media': SharedMedia;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

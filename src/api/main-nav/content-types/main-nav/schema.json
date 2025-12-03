@@ -25,6 +25,11 @@
         "videos",
         "audios"
       ]
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "atomic.cta",
+      "repeatable": false
     }
   }
 }
