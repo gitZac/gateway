@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_atomic_simple_lists",
+  "info": {
+    "displayName": "simpleList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

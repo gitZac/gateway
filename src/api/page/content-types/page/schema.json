@@ -19,8 +19,8 @@
       "components": [
         "shared.seo",
         "global.magazine-hero",
-        "global.test-component",
-        "global.event-card-list"
+        "global.event-card-list",
+        "global.simple-nav"
       ]
     }
   }
