@@ -12,6 +12,19 @@ export interface AtomicCta extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomicIconLink extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_icon_links';
+  info: {
+    displayName: 'iconLink';
+    icon: 'alien';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface AtomicLink extends Struct.ComponentSchema {
   collectionName: 'components_atomic_links';
   info: {
@@ -74,6 +87,15 @@ export interface GlobalMagazineHero extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalSimpleFooter extends Struct.ComponentSchema {
+  collectionName: 'components_global_simple_footers';
+  info: {
+    displayName: 'SimpleFooter';
+    icon: 'apps';
+  };
+  attributes: {};
+}
+
 export interface GlobalSimpleNav extends Struct.ComponentSchema {
   collectionName: 'components_global_simple_navs';
   info: {
@@ -125,11 +147,13 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'atomic.cta': AtomicCta;
+      'atomic.icon-link': AtomicIconLink;
       'atomic.link': AtomicLink;
       'atomic.nested-link': AtomicNestedLink;
       'atomic.simple-list': AtomicSimpleList;
       'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
+      'global.simple-footer': GlobalSimpleFooter;
       'global.simple-nav': GlobalSimpleNav;
       'shared.media': SharedMedia;
       'shared.rich-text': SharedRichText;
