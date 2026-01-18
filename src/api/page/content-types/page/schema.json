@@ -20,7 +20,8 @@
         "shared.seo",
         "global.magazine-hero",
         "global.event-card-list",
-        "global.simple-nav"
+        "global.simple-nav",
+        "global.simple-footer"
       ]
     }
   }

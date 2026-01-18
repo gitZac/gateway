@@ -512,6 +512,37 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMainFooterMainFooter extends Struct.SingleTypeSchema {
+  collectionName: 'main_footers';
+  info: {
+    displayName: 'Main Footer';
+    pluralName: 'main-footers';
+    singularName: 'main-footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    copyrightText: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerLinks: Schema.Attribute.Component<'atomic.nested-link', true>;
+    footerLogo: Schema.Attribute.Component<'shared.media', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::main-footer.main-footer'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    socialIcons: Schema.Attribute.Component<'atomic.icon-link', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMainNavMainNav extends Struct.SingleTypeSchema {
   collectionName: 'main_navs';
   info: {
@@ -559,6 +590,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'global.magazine-hero',
         'global.event-card-list',
         'global.simple-nav',
+        'global.simple-footer',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -1088,6 +1120,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::main-footer.main-footer': ApiMainFooterMainFooter;
       'api::main-nav.main-nav': ApiMainNavMainNav;
       'api::page.page': ApiPagePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_footers",
+  "info": {
+    "singularName": "main-footer",
+    "pluralName": "main-footers",
+    "displayName": "Main Footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "footerLinks": {
+      "type": "component",
+      "component": "atomic.nested-link",
+      "repeatable": true
+    },
+    "socialIcons": {
+      "type": "component",
+      "component": "atomic.icon-link",
+      "repeatable": true
+    },
+    "copyrightText": {
+      "type": "string"
+    },
+    "footerLogo": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  }
+}
