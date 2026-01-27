@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_atomic_text_items",
+  "info": {
+    "displayName": "textItem",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
