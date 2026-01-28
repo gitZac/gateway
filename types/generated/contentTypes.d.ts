@@ -587,10 +587,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     components: Schema.Attribute.DynamicZone<
       [
         'shared.seo',
-        'global.magazine-hero',
         'global.event-card-list',
         'global.simple-nav',
         'global.simple-footer',
+        'global.simple-hero',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

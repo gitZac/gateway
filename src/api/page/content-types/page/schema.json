@@ -18,10 +18,10 @@
       "type": "dynamiczone",
       "components": [
         "shared.seo",
-        "global.magazine-hero",
         "global.event-card-list",
         "global.simple-nav",
-        "global.simple-footer"
+        "global.simple-footer",
+        "global.simple-hero"
       ]
     }
   }
