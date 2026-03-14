@@ -586,19 +586,12 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   attributes: {
     components: Schema.Attribute.DynamicZone<
       [
-<<<<<<< Updated upstream
         'shared.seo',
-        'global.magazine-hero',
-        'global.event-card-list',
-        'global.simple-nav',
-        'global.simple-footer',
-=======
         'global.event-card-list',
         'global.simple-nav',
         'global.simple-footer',
         'global.simple-hero',
         'global.multi-content-boxes',
->>>>>>> Stashed changes
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

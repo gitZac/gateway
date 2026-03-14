@@ -21,6 +21,7 @@ export interface AtomicCta extends Struct.ComponentSchema {
   };
   attributes: {
     ctaLink: Schema.Attribute.String;
+    ctaRoles: Schema.Attribute.Component<'atomic.text-item', true>;
     ctaText: Schema.Attribute.String;
   };
 }
@@ -72,6 +73,17 @@ export interface AtomicSimpleList extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomicTextItem extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_text_items';
+  info: {
+    displayName: 'textItem';
+    icon: 'bulletList';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalEventCardList extends Struct.ComponentSchema {
   collectionName: 'components_global_event_card_lists';
   info: {
@@ -120,6 +132,21 @@ export interface GlobalSimpleFooter extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {};
+}
+
+export interface GlobalSimpleHero extends Struct.ComponentSchema {
+  collectionName: 'components_global_simple_heroes';
+  info: {
+    displayName: 'SimpleHero';
+    icon: 'alien';
+  };
+  attributes: {
+    copy: Schema.Attribute.String;
+    heroCta: Schema.Attribute.Component<'atomic.cta', true>;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    isTwoCol: Schema.Attribute.Boolean;
+    mainTitle: Schema.Attribute.String;
+  };
 }
 
 export interface GlobalSimpleNav extends Struct.ComponentSchema {
@@ -178,10 +205,12 @@ declare module '@strapi/strapi' {
       'atomic.link': AtomicLink;
       'atomic.nested-link': AtomicNestedLink;
       'atomic.simple-list': AtomicSimpleList;
+      'atomic.text-item': AtomicTextItem;
       'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
       'global.multi-content-boxes': GlobalMultiContentBoxes;
       'global.simple-footer': GlobalSimpleFooter;
+      'global.simple-hero': GlobalSimpleHero;
       'global.simple-nav': GlobalSimpleNav;
       'shared.media': SharedMedia;
       'shared.rich-text': SharedRichText;

@@ -12,6 +12,11 @@
     "ctaLink": {
       "type": "string",
       "required": false
+    },
+    "ctaRoles": {
+      "type": "component",
+      "component": "atomic.text-item",
+      "repeatable": true
     }
   },
   "config": {}
