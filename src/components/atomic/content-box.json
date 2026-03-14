@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_atomic_content_boxes",
+  "info": {
+    "displayName": "ContentBox"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "atomic.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

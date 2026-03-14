@@ -21,7 +21,8 @@
         "global.event-card-list",
         "global.simple-nav",
         "global.simple-footer",
-        "global.simple-hero"
+        "global.simple-hero",
+        "global.multi-content-boxes"
       ]
     }
   }

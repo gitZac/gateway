@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AtomicContentBox extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_content_boxes';
+  info: {
+    displayName: 'ContentBox';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'atomic.cta', false>;
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface AtomicCta extends Struct.ComponentSchema {
   collectionName: 'components_atomic_ctas';
   info: {
@@ -99,6 +112,19 @@ export interface GlobalMagazineHero extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalMultiContentBoxes extends Struct.ComponentSchema {
+  collectionName: 'components_global_multi_content_boxes';
+  info: {
+    displayName: 'MultiContentBoxes';
+    icon: 'archive';
+  };
+  attributes: {
+    contentBox: Schema.Attribute.Component<'atomic.content-box', true>;
+    isDarkTheme: Schema.Attribute.Boolean;
+    sectionTitle: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalSimpleFooter extends Struct.ComponentSchema {
   collectionName: 'components_global_simple_footers';
   info: {
@@ -173,6 +199,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'atomic.content-box': AtomicContentBox;
       'atomic.cta': AtomicCta;
       'atomic.icon-link': AtomicIconLink;
       'atomic.link': AtomicLink;
@@ -181,6 +208,7 @@ declare module '@strapi/strapi' {
       'atomic.text-item': AtomicTextItem;
       'global.event-card-list': GlobalEventCardList;
       'global.magazine-hero': GlobalMagazineHero;
+      'global.multi-content-boxes': GlobalMultiContentBoxes;
       'global.simple-footer': GlobalSimpleFooter;
       'global.simple-hero': GlobalSimpleHero;
       'global.simple-nav': GlobalSimpleNav;

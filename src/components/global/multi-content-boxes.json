@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_multi_content_boxes",
+  "info": {
+    "displayName": "MultiContentBoxes",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "contentBox": {
+      "type": "component",
+      "component": "atomic.content-box",
+      "repeatable": true
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "isDarkTheme": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
