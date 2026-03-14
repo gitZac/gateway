@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_global_flip_cards",
+  "info": {
+    "displayName": "flipCards",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "sectionContent": {
+      "type": "component",
+      "component": "atomic.title-text",
+      "repeatable": false
+    },
+    "flipCard": {
+      "type": "component",
+      "component": "atomic.flip-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

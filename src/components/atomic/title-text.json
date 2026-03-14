@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_atomic_title_texts",
+  "info": {
+    "displayName": "titleText",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

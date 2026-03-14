@@ -22,7 +22,8 @@
         "global.simple-nav",
         "global.simple-footer",
         "global.simple-hero",
-        "global.multi-content-boxes"
+        "global.multi-content-boxes",
+        "global.flip-cards"
       ]
     }
   }

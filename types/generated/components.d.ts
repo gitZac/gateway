@@ -26,6 +26,19 @@ export interface AtomicCta extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomicFlipCard extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_flip_cards';
+  info: {
+    displayName: 'flipCard';
+    icon: 'book';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'atomic.title-text', false>;
+    cta: Schema.Attribute.Component<'atomic.link', false>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface AtomicIconLink extends Struct.ComponentSchema {
   collectionName: 'components_atomic_icon_links';
   info: {
@@ -84,6 +97,18 @@ export interface AtomicTextItem extends Struct.ComponentSchema {
   };
 }
 
+export interface AtomicTitleText extends Struct.ComponentSchema {
+  collectionName: 'components_atomic_title_texts';
+  info: {
+    displayName: 'titleText';
+    icon: 'bold';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalEventCardList extends Struct.ComponentSchema {
   collectionName: 'components_global_event_card_lists';
   info: {
@@ -92,6 +117,18 @@ export interface GlobalEventCardList extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
+  };
+}
+
+export interface GlobalFlipCards extends Struct.ComponentSchema {
+  collectionName: 'components_global_flip_cards';
+  info: {
+    displayName: 'flipCards';
+    icon: 'apps';
+  };
+  attributes: {
+    flipCard: Schema.Attribute.Component<'atomic.flip-card', true>;
+    sectionContent: Schema.Attribute.Component<'atomic.title-text', false>;
   };
 }
 
@@ -201,12 +238,15 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'atomic.content-box': AtomicContentBox;
       'atomic.cta': AtomicCta;
+      'atomic.flip-card': AtomicFlipCard;
       'atomic.icon-link': AtomicIconLink;
       'atomic.link': AtomicLink;
       'atomic.nested-link': AtomicNestedLink;
       'atomic.simple-list': AtomicSimpleList;
       'atomic.text-item': AtomicTextItem;
+      'atomic.title-text': AtomicTitleText;
       'global.event-card-list': GlobalEventCardList;
+      'global.flip-cards': GlobalFlipCards;
       'global.magazine-hero': GlobalMagazineHero;
       'global.multi-content-boxes': GlobalMultiContentBoxes;
       'global.simple-footer': GlobalSimpleFooter;

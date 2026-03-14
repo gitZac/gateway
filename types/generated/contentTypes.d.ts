@@ -592,6 +592,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'global.simple-footer',
         'global.simple-hero',
         'global.multi-content-boxes',
+        'global.flip-cards',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
