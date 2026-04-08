@@ -128,7 +128,10 @@ export interface GlobalFlipCards extends Struct.ComponentSchema {
   };
   attributes: {
     flipCard: Schema.Attribute.Component<'atomic.flip-card', true>;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     sectionContent: Schema.Attribute.Component<'atomic.title-text', false>;
+    useCollectionContent: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 

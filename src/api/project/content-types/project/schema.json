@@ -10,5 +10,29 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "intro": {
+      "type": "component",
+      "component": "atomic.title-text",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "atomic.flip-card",
+      "repeatable": false
+    },
+    "pageContent": {
+      "type": "blocks"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
 }

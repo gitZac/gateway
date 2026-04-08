@@ -13,8 +13,27 @@
     },
     "flipCard": {
       "type": "component",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "useCollectionContent"
+            },
+            true
+          ]
+        }
+      },
       "component": "atomic.flip-card",
       "repeatable": true
+    },
+    "useCollectionContent": {
+      "type": "boolean",
+      "default": false
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   },
   "config": {}
