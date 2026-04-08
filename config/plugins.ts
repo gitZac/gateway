@@ -3,7 +3,7 @@ import type { Core } from "@strapi/strapi";
 module.exports = ({ env }) => ({
   "strapi-v5-plugin-populate-deep": {
     config: {
-      defaultDepth: 5, // default: 5
+      defaultDepth: 10, // default: 5
     },
   },
 });
